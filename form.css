@@ -1,0 +1,32 @@
+.macondo-regular {
+    font-family: "Macondo", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+body {
+    font-family: Macondo;
+
+}
+
+label {
+    font-size: 24px;
+}
+
+select, form, label {
+    vertical-align: middle;
+}
+
+#registrationForm {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    background-color: aqua;
+    
+}
+
+form {
+    background-color: antiquewhite;
+    vertical-align: middle;
+}
