@@ -5,6 +5,16 @@
        <link rel="stylesheet" href="form.css">
     </head>
     <body>
+        <div id="banner">
+            <div id="event-name-container">
+                <img id="banner-logo" src="assets/logos/header-conquest-compressor.png">
+                <h1>STORE CHAMPIONSHIP</h1>
+            </div>
+            <div id="reg-name-container">
+                <h3>◆ Player Registration ◆</h3>
+            </div>
+        </div>
+
         <div id="registrationForm">
             <form>
                 <label id="name" for="pname">Player Name</label>
@@ -13,7 +23,7 @@
                     <br>
                 <label id="faction" for="factionChoice">Faction</label>
                 <select type="range" id="factionChoice" name="factionChoice">
-                    <option value="defaultValue" selected>-</option>
+                    <option value="defaultValue" disabled selected>Choose a faction</option>
                     <option value="City States">City States</option>
                     <option value="Dweghom">Dweghom</option>
                     <option value="Hundred Kingdoms">Hundred Kingdoms</option>
@@ -26,7 +36,7 @@
                     <br>
                     <br>
                 <label id="warlord" for="pname">Warlord</label>
-                <span id="factionPlaceholder">Choose faction...</span>
+                <span id="factionPlaceholder"></span>
                 <select type="range" id="warlordCSInput" name="warlordCS" style="display:none">
                     <option value="defaultValue" selected>-</option>
                     <option value="Aristarch">Aristarch</option>
@@ -107,6 +117,8 @@
                 <input type="submit">
             </form>
         </div>
+
+        <h2 id="registered-players">REGISTERED PLAYERS</h2>
 
                 <script src="form.js"></script>
 
