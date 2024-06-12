@@ -5,12 +5,14 @@
   }
 
 body {
+    background-color:rgb(45,45,45);
     font-family: Macondo;
 
 }
 
 label {
-    font-size: 24px;
+    font-size: 32px;
+    padding-right: 12px;
 }
 
 select, form, label {
@@ -18,15 +20,51 @@ select, form, label {
 }
 
 #registrationForm {
-    height: 500px;
+
     width: 100%;
     display: flex;
     vertical-align: middle;
-    background-color: aqua;
+    background-image:
+                linear-gradient(45deg,
+                    rgba(255, 255, 255, 0.75),
+                    rgba(0, 0, 0, 0.75)), 
+                      url('assets/imgs/The-Legions.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+            
     
 }
 
 form {
-    background-color: antiquewhite;
+    padding: 36px;
     vertical-align: middle;
+}
+
+input[type=text], select {
+    height: 1.6rem;
+    width: 300px;
+}
+
+input[type=text], input[type=number] {
+    line-height: 1.6rem;
+}
+
+input[type=number] {
+    width: 100px;
+}
+
+input[type=text], input[type=number], select {
+    border: none;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color:darkgoldenrod;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }
