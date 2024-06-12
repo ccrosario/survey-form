@@ -15,8 +15,8 @@
             </div>
         </div>
 
-        <div id="registrationForm">
-            <form>
+        <div id="registration-form-container">
+            <form id="registration-form">
                 <label id="name" for="pname">Player Name</label>
                 <input type="text" id="pname" name="pname">
                     <br>
@@ -114,13 +114,19 @@
                 <input type="text" id="pPin" name="pPin">
                     <br>
                     <br>
-                <input type="submit">
+                <div id="submit-button-container">
+                    <input type="submit">
+                </div>
             </form>
         </div>
 
-        <h2 id="registered-players">REGISTERED PLAYERS</h2>
 
-                <script src="form.js"></script>
-
+        <div id="registered-players-container">
+            <h2 id="registered-players-heading">REGISTERED PLAYERS</h2>
+            <ul id="registered-players-list"></ul>
+        </div>
+                
+        <script src="form.js"></script>
+        <script>displayRegisteredPlayers();</script>
     </body>
 </html>

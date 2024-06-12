@@ -1,6 +1,7 @@
 
 let faction = document.getElementById("factionChoice");
-let factionBG = document.getElementById("registrationForm");
+let factionBG = document.getElementById("registration-form-container");
+let registeredPlayersElement = document.getElementById("registered-players-list");
 let chosenFaction = faction.value;
 
 const warlordLists = Array.from(document.querySelectorAll('[id*="Input"]'), (list) => {
@@ -47,7 +48,6 @@ let registeredPlayers = [
 
     }
 ];
-
 
 faction.addEventListener("change", () => {
     chosenFaction = faction.value;
@@ -113,3 +113,38 @@ faction.addEventListener("change", () => {
             break;
     }    
 });
+
+function displayRegisteredPlayers () {
+    if (registeredPlayers){
+        let i=0
+        while (i < registeredPlayers.length) {
+            
+            const registeredPlayerWrapper = document.createElement("ul");
+            registeredPlayersElement.appendChild(registeredPlayerWrapper);
+
+            const playerName = document.createElement("li");
+            const playerFaction = document.createElement("li");
+            const playerWarlord = document.createElement("li");
+            const playerPoints = document.createElement("li");
+            const playerPin = document.createElement("li");
+
+                nameNode = document.createTextNode(registeredPlayers[i].playerName);
+                playerName.appendChild(nameNode);
+
+                factionNode = document.createTextNode(registeredPlayers[i].faction);
+                playerFaction.appendChild(factionNode);
+
+                warlordNode = document.createTextNode(registeredPlayers[i].warlord);
+                playerWarlord.appendChild(warlordNode);
+
+                pointsNode = document.createTextNode(registeredPlayers[i].listPoints+'pts');
+                playerPoints.appendChild(pointsNode);
+
+                pinNode = document.createTextNode(registeredPlayers[i].playerPin);
+                playerPin.appendChild(pinNode);
+
+            registeredPlayerWrapper.append(playerName,playerFaction,playerWarlord,playerPoints,playerPin);
+            i++
+        }
+    }
+}
